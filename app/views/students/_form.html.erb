@@ -1,0 +1,68 @@
+
+
+<div class="card" style= "width: 30rem"></br>
+
+<%= form_with(model: @student,local:true) do |f|%>
+
+
+  <div>
+   <strong> <%=f.label :first_name,'*First Name:'%>
+    <%=f.text_field :first_name %>
+  </div></br>
+  <div>
+    <%=f.label :last_name,'*Last Name :'%>
+    <%=f.text_field :last_name%>
+  </div></br>
+
+  <div>
+    <div>
+      <%=f.label :email,'*Email:'%>
+      <%=f.email_field :email%>
+    </div></br>
+    <div>
+      <%=f.label :password,'*Password:'%>
+      <%=f.password_field :password%>
+    </div></br>
+    <div>
+      <%=f.label :father_name,'Father Name:'%>
+      <%=f.text_field :father_name%>
+    </div></br>
+
+    <%=f.label :mother_name,'Mother Name:'%>
+    <%=f.text_field :mother_name%>
+  </div></br>
+
+  <div>
+    <%=f.label :blood_group,'Blood Group:'%>
+    <%=f.text_field :blood_group%>
+  </div> </br>
+  <div>
+    <%=f.label :contact_number,'*Contact Number:'%>
+    <%=f.text_field :contact_number%>
+  </div></br>
+
+
+    <div>
+      <%=f.label :standard,'*Standard:'%>
+      <%=f.select :standard ,["Select the standard","First standard","Second standard","Third standard","Forth standard","Fifth standard","Sixth standard","seventh standard","eighth standard","Ninth standard","Tenth standard"]%>
+    </div></br>
+
+    <div>
+      <%=f.label :date_of_birth,'*Date Of Birth:'%>
+      <%=f.date_field :date_of_birth%>
+    </div></br>
+
+  <div class="actions">
+
+    <%=f.submit "create", class:'btn btn-success' %>
+  </div>
+  </div>
+  </div>
+
+
+<%end %>
+
+  </strong>
+
+    <%#= f.submit "Log in",class:"btn btn-success" %>
+<!--  </div>-->

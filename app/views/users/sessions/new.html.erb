@@ -1,0 +1,39 @@
+
+
+
+<div align="center">
+
+<div class="card" style="width: 25rem;">
+  <img src="https://logos.textgiraffe.com/logos/logo-name/Admin-designstyle-colors-m.png" class="card-img-top"alt="...">
+
+<!--</br>-->
+<!--<h2> Admin Login</h2>-->
+<!--</br>-->
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :'Email:' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "Enter Admin Email" %>
+  </div>
+    </br>
+  <div class="field">
+    <%= f.label :'Password:'%>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Enter Admin Password" %>
+  </div>
+    </br>
+  <%# if devise_mapping.rememberable? %>
+<!--    <div class="field">-->
+      <%#= f.check_box :remember_me %>
+      <%#= f.label :remember_me %>
+      <%#= f.submit "Log in",class:"btn btn-success" %>
+<!--    </div>-->
+  <%# end %>
+
+  <div class="actions">
+    <%= f.submit "Log in",class:"btn btn-success" %>
+  </div>
+<% end %>
+</br>
+
+<%= render "users/shared/links" %>
+</div>
+</div>
