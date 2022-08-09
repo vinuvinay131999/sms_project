@@ -31,15 +31,16 @@
     <%=f.label :mother_name,'Mother Name:'%>
     <%=f.text_field :mother_name%>
   </div></br>
+    <div>
+      <%=f.label :contact_number,'*Contact Number:'%>
+      <%=f.text_field :contact_number%>
+    </div></br>
 
   <div>
     <%=f.label :blood_group,'Blood Group:'%>
-    <%=f.text_field :blood_group%>
+    <%=f.select :blood_group ,["Select the Blood group","A positive","B positive","AB positive","O positive","O negetive","A negetive","B negetive","AB negetive"]%>
   </div> </br>
-  <div>
-    <%=f.label :contact_number,'*Contact Number:'%>
-    <%=f.text_field :contact_number%>
-  </div></br>
+
 
 
     <div>
